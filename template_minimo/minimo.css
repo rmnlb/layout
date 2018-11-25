@@ -1,0 +1,233 @@
+/*global styles*/
+
+@font-face {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    src: url("fonts/Playfair_Display/PlayfairDisplay-Regular.ttf");
+}
+@font-face {
+    font-family: "Ubuntu";
+    font-weight: 300;
+    src: url("fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+h1, p, img, h2 {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+.h1 {
+    margin-right: 371px;
+}
+body {
+    margin: 0;
+}
+.menu_item a, .title, .post_text, .email, .btn {
+    font-family: "Playfair Display", serif;
+    color: #626262;
+    font-weight: 400;
+}
+.caption {
+    display: block;
+    color: #b4ad9e;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+.post_title {
+    font-size: 30px;
+    padding-bottom: 34px;
+}
+.post_text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/*header*/
+
+.wraper {
+    width: 1062px;
+    margin: 0 auto;
+    padding: 68px 0 71px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu_item a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+}
+nav {
+    display: flex;
+    flex-grow: 1;
+}
+.menu {
+    width: 573px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+/*margin spacing nav*/
+
+/*.menu .menu_item:nth-child(1) {*/
+    /*margin-right: 121px;*/
+/*}*/
+/*.menu .menu_item:nth-child(2) {*/
+    /*margin-right: 103px;*/
+/*}*/
+/*.menu .menu_item:nth-child(3) {*/
+    /*margin-right: 93px;*/
+/*}*/
+.menu_item {
+    display: inline-block;
+}
+
+/*main content*/
+
+.homepage, .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.content {
+    flex-basis: 100%;
+}
+.first_post {
+    display: flex;
+    flex-basis: 1062px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 135px;
+}
+.main_post_content {
+    flex-basis: 893px;
+}
+.main_post_content .post_text {
+    margin-bottom: 52px;
+}
+.post {
+    display: flex;
+    flex-basis: 894px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.post_part {
+    flex-basis: 423px;
+    margin-bottom: 130px;
+}
+.small {
+    height: 66px;
+    overflow: hidden;
+}
+
+.img_small {
+    padding-bottom: 30px;
+}
+.img {
+    width: 420px;
+    height: 280px;
+}
+
+/*newsletter*/
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    background-color: #f0f0f0;
+    flex-grow: 1;
+    margin-bottom: 101px;
+}
+.news_sign {
+    width: 401px;
+    flex-wrap: wrap;
+}
+.news_title {
+    margin-top: 70px;
+    margin-bottom: 80px;
+    color: #333;
+    font-size: 30px;
+    letter-spacing: 0.75px;
+}
+.form {
+    position: relative;
+    margin-bottom: 74px;
+}
+.email, .arrow_btn {
+    background: inherit;
+    border: none;
+    padding: 0;
+}
+.email {
+    position: relative;
+    width: 401px;
+    padding: 0 0 12px 4px;
+    border-bottom: 1px solid #000;
+}
+.arrow_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*load more button*/
+
+.btn_container {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 1368px;
+}
+.btn {
+    width: 166px;
+    height: 62px;
+    border: 1px solid #626262;
+    font-size: 20px;
+    line-height: 24px;
+    background: inherit;
+}
+
+/*footer*/
+
+.footer {
+    background-color: #f0f0f0;
+}
+.wraper_footer {
+    width: 1062px;
+    margin: 0 auto;
+    padding: 41px 0 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_footer, .menu_footer, .social, .menu_social {
+    display: flex;
+    padding: 0;
+    margin: 0;
+   justify-content: space-between;
+}
+.menu_social, .menu_footer {
+    color: #000000;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.menu_footer_item, .social_item {
+    list-style: none;
+}
+.menu_footer {
+    flex-basis: 200px;
+    margin-left: 80px;
+}
+.social_item {
+    margin-left: 18px;
+}
