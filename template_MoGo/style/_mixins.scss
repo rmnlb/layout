@@ -1,0 +1,19 @@
+@mixin flex($j-content, $flex-basis, $align-items, $wrap) {
+  display: flex;
+  justify-content: $j-content;
+  flex-basis: $flex-basis;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+}
+@mixin clearfix() {
+  content: "";
+  display: block;
+  clear: both;
+}
+@mixin font($family, $size, $weight, $transform, $color) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  text-transform: $transform;
+  color: $color;
+}

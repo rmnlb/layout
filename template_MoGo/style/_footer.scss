@@ -1,0 +1,151 @@
+@import "variables";
+@import "mixins";
+
+.map {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.85) 0%,
+          rgba(255, 255, 255, 0.85) 90%),
+  url("../img/map-pic.png") no-repeat center;
+  &__link {
+    @include font($montserrat, 24px, 700, uppercase, $red !important);
+    text-align: center;
+  }
+  &__items {
+    padding-top: 48px;
+    padding-bottom: 26px;
+  }
+  &__point {
+    margin-bottom: 17px;
+  }
+  &__text {
+    margin-bottom: 0;
+  }
+}
+
+.foo {
+  padding-top: 65px;
+  margin-bottom: $post-row-margin;
+
+  &__title {
+    @include font($montserrat, 14px, 400, uppercase, $main-title);
+    padding-top: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+.foo-mogo {
+  padding-left: 0;
+  &__title {
+    @include font($montserrat, 46px, 700, none, $foo-grey);
+    margin-bottom: $foo-margin;
+  }
+  &__text {
+    @include font ($roboto, 15px, 400, none, $main-text);
+    line-height: 24px;
+    margin-bottom: $foo-margin;
+    height: 90px;
+    overflow-y: hidden;
+  }
+  &__followers {
+    @include font($montserrat, 14px, 400, none, $main-title);
+  }
+  &__count {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__social {
+    padding-left: 0;
+    padding-right: 11px;
+    @include font($roboto, 15px, 400, none, $main-text);
+    font-style: italic;
+    line-height: 24px;
+  }
+  &__item {
+    display: inline-block;
+    margin-left: 12px;
+  }
+  &__form {
+    @include flex(flex-start, auto, stretch, nowrap);
+    padding-right: 20px;
+
+    &__input {
+      width: 230/(230+150)*100%;
+      @include font($roboto, 15px, 400, none, $foo-grey);
+      font-style: italic;
+      line-height: 24px;
+      padding: 10px 15px;
+      border: none;
+    }
+    &__btn {
+      width: 150/(230+150)*100%;
+      @include font($montserrat, 14px, 700, uppercase, $header-color);
+      background: $blue;
+      border: none;
+    }
+  }
+}
+
+.foo-hr {
+  border: 1px solid #e5e5e5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.foo-blog {
+  //padding-top: 15px;
+
+  &__post {
+    width: 100%;
+    margin-bottom: 31px;
+
+    &:after {
+      @include clearfix();
+    }
+  }
+  &__photo {
+    display: block;
+    float: left;
+    margin-right: 20px;
+  }
+  &__text {
+    @include font($montserrat, 12px, 400, uppercase, $main-title);
+    line-height: 18px;
+    padding-top: 16px;
+    margin-bottom: 0;
+  }
+  &__date {
+    @include font($roboto, 13px, 400, none, $main-text);
+    font-style: italic;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+}
+
+.foo-insta {
+  padding-left: 0;
+  padding-right: 0;
+
+  &__box {
+    @include flex(flex-start, auto, flex-start, wrap);
+    margin-bottom: 20px;
+  }
+  &__img {
+    padding: 2px 2px 0 0;
+  }
+  &__link {
+    @include font($roboto, 13px, 400, none, $main-text !important);
+    font-style: italic;
+    line-height: 24px;
+    text-decoration: none !important;
+  }
+}
+
+.footer-copyright {
+  @include font($montserrat, 14px, 400, none, $main-title);
+  text-align: center;
+  padding: 16px 0;
+
+  &__author {
+    color: $red;
+  }
+}

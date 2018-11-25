@@ -1,0 +1,400 @@
+@import "variables";
+@import "mixins";
+
+
+.col-custom-20 {
+  width: 20%;
+}
+.blue {
+  background: $blue;
+}
+.team-icon {
+  display: block;
+  margin: 103px auto 10px;
+}
+.team {
+  @include font($montserrat, 18px, 700, uppercase, $header-color);
+  text-align: center;
+}
+
+.row {
+
+  &__cards_first {
+    margin-bottom: $post-row-margin;
+  }
+  &_flex {
+    @include flex(center, 50%, flex-start, nowrap);
+  }
+}
+.grey {
+  background: $bg-grey;
+}
+.logo-board {
+  width: 100%;
+  display: block;
+  margin: 50px auto;
+  padding: 0;
+}
+.bg-img {
+  padding-top: 65px;
+  &_lake {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.85) 0%,
+          rgba(255, 255, 255, 0.85) 90%), url("../img/lake.png") no-repeat center;
+  }
+  &_mountain {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.85) 0%,
+            rgba(255, 255, 255, 0.85) 90%),
+    url("../img/mountain.png") no-repeat center;
+  }
+}
+
+.post {
+
+  &_margin {
+    margin-bottom: $blocks-margin;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__name {
+    @include font($kaushan, 24px, 400, none, $main-title);
+  }
+  &__head {
+    @include font($montserrat, 30px, 700, uppercase, $main-title);
+    margin-bottom: 35px;
+  }
+  &__text {
+    @include font($roboto, 15px, 400, none, $main-text);
+    text-align: center;
+    margin-bottom: $post-row-margin;
+  }
+  &__blue {
+    padding-top: 54px;
+    padding-bottom: 45px;
+    text-align: center;
+    @include font($montserrat, 14px, 400, none, $header-color);
+    border-left: 1px solid $header-color;
+    &:last-child {
+      border-right: 1px solid $header-color;
+    }
+    &__number {
+      @include font($montserrat, 72px, 700, none, $header-color);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.photo {
+  position: relative;
+  padding: 0;
+
+  &:hover &__hover {
+    display: block;
+  }
+  &:hover &__container &__img {
+    visibility: hidden;
+  }
+  &_block {
+    position: relative;
+    padding: 0;
+  }
+  &__container {
+    display: block;
+    width: 355px;
+    height: auto;
+    background-color: $blue;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+  &__hover {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    display: none;
+    width: 355px;
+
+    &_small {
+      height: 230px;
+    }
+    &_large {
+      height: 435px;
+    }
+
+    &_mac {
+      background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%,
+              rgba(243, 129, 129, 0.9) 90%),
+      url("../img/mac.png") no-repeat center;
+    }
+    &_desk {
+      background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%,
+              rgba(243, 129, 129, 0.9) 90%),
+      url("../img/desk.png") no-repeat center;
+    }
+    &_desk2 {
+      background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%,
+              rgba(243, 129, 129, 0.9) 90%),
+      url("../img/desk2.png") no-repeat center;
+    }
+
+    &_dix {
+      background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%,
+              rgba(243, 129, 129, 0.9) 90%),
+      url("../img/man1.png") no-repeat center;
+    }
+    &_campbell {
+      background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%,
+              rgba(243, 129, 129, 0.9) 90%),
+      url("../img/man2.png") no-repeat center;
+    }
+    &_fertig {
+      background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%,
+              rgba(243, 129, 129, 0.9) 90%),
+      url("../img/man3.png") no-repeat center;
+    }
+  }
+
+  &__caption {
+
+    &_center {
+      text-align: center;
+    }
+    &_padding {
+      padding-right: 30px;
+    }
+
+    @include font($roboto, 15px, 400, none, $main-text);
+    line-height: 24px;
+    padding-top: 25px;
+
+    &__name {
+      @include font($montserrat, 14px, 700, uppercase, $main-title);
+    }
+  }
+
+  &__follow {
+    @include flex(center, auto, stretch, nowrap);
+    background: $yellow;
+    margin: 200px auto;
+    height: 56px;
+    width: 224px;
+
+    &__item {
+      width: 56px;
+      padding-top: 15px;
+
+      &:hover {
+        background-color: $red;
+      }
+    }
+    &__img {
+      display: block;
+      margin: 0 auto;
+    }
+    &_facebook:hover &__img {
+      content: url("../img/facebook-white.png");
+    }
+    &_twitter:hover &__img {
+      content: url("../img/twitter-white.png");
+    }
+    &_pint:hover &__img {
+      content: url("../img/pinterest-white.png");
+    }
+    &_insta:hover &__img {
+      content: url("../img/instagram-white.png");
+    }
+  }
+
+  &__calendar {
+    position: absolute;
+    top: 139px;
+    left: -10px;
+    padding: 15px;
+    background: $blue;
+    text-align: center;
+  }
+  &__month {
+    @include font($roboto, 15px, 400, none, $header-color);
+    font-style: italic;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  &__date {
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+.cards {
+  @include flex(flex-start, auto, flex-start, nowrap);
+  &_wrap {
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+  }
+  &__icon {
+    display: block;
+  }
+  &__content {
+    width: 300px;
+    padding-left: 27px;
+  }
+  &__title {
+    @include font($montserrat, 14px, 400, uppercase, $main-title);
+  }
+  &__text {
+    @include font($roboto, 15px, 400, none, $main-text);
+  }
+
+}
+
+.devices {
+
+  &__pad {
+    position: relative;
+  }
+  &__phone {
+    position: absolute;
+    top: 200px;
+    left: 400px;
+  }
+}
+
+.acc {
+  padding-left: 15px;
+  padding-right: 20px;
+  height: 412px;
+  &__header {
+    background: none;
+    padding: 15px 0 15px;
+  }
+  &__title {
+    margin-bottom: 0;
+    text-decoration: none !important;
+    @include font($montserrat, 14px, 400, uppercase, $main-title !important);
+
+    &__icon {
+      margin-right: 14px;
+    }
+  }
+
+  &__content {
+    padding: 20px 20px 27px 20px;
+  }
+  &__text {
+    height: 135px;
+    padding: 0 20px 0 0;
+    overflow-y: scroll;
+    @include font($roboto, 15px, 400, none, $main-text);
+    font-style: italic;
+    line-height: 24px;
+    /* width */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px #f5f5f5;
+      border-radius: 3px;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $blue;
+      border-radius: 1px;
+    }
+
+  }
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  height: 24px;
+}
+.carousel-control-prev {
+  left: -40px;
+}
+.carousel-control-next {
+  right: -40px;
+}
+.carousel-item {
+
+  &__content {
+    @include flex(space-between, auto, flex-start, nowrap);
+    padding: 65px 110px;
+  }
+  &__icon {
+    background: none;
+    &_border {
+      border: 3px solid $blue;
+      padding: 44px 42px 44px 44px;
+    }
+    &_round {
+      border-radius: 50%;
+    }
+  }
+  &__message {
+    padding-left: 60px;
+  }
+  &__text {
+    @include font($roboto, 24px, 400, none, $main-text);
+    font-style: italic;
+    line-height: 36px;
+  }
+  &__line {
+    float: left;
+    padding-top: 18px;
+    padding-right: 9px;
+  }
+  &__author {
+    @include font($kaushan, 24px, 400, none, $main-title);
+  }
+
+}
+
+.portfolio {
+  padding: 0;
+
+  &__image {
+    display: block;
+    float: left;
+    width: 50%
+  }
+}
+
+.comment {
+  @include flex(flex-start, 50%, flex-start, nowrap);
+  padding: 0 40px 70px;
+
+  &__author {
+    @include font($roboto, 15px, 400, none, $main-title);
+    font-style: italic;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+  &__content {
+    padding-left: 27px;
+  }
+  &__item {
+    margin-bottom: 10px;
+  }
+}
+
+.counter {
+  @include flex(flex-start, auto, stretch, nowrap);
+  padding-top: 35px;
+
+  &__icon {
+  float: left;
+  display: block;
+  padding: 6px 6px 0 0;
+  }
+  &__number {
+    @include font($roboto, 15px, 400, none, $main-text);
+    font-style: italic;
+    line-height: 24px;
+  }
+  &__item {
+    width: 70px;
+  }
+}
+

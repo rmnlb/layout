@@ -1,0 +1,18 @@
+@import "variables";
+@import "mixins";
+
+.linebreak {
+  width: 72px;
+  height: 5px;
+  background-color: $red;
+
+  &_header {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    display: none;
+  }
+  &_post {
+    margin: 0 auto 46px;
+  }
+}

@@ -1,0 +1,18 @@
+@import "linebreak";
+@import "header";
+@import "main";
+@import "footer";
+
+
+* {
+  margin: 0;
+}
+::after, ::before {
+  box-sizing: content-box;
+}
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+.container {
+  padding: 0;
+}
